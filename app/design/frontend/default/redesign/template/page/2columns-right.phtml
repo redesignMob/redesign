@@ -1,0 +1,140 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2011 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+/**
+ * Template for Mage_Page_Block_Html
+ */
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->getLang() ?>" lang="<?php echo $this->getLang() ?>">
+<head>
+<?php echo $this->getChildHtml('head') ?>
+<link href='http://fonts.googleapis.com/css?family=Iceland' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="<?php echo $this->getSkinUrl() ?>images/test1.png" width="300" height="75" />
+        </div>
+        <div class="navigation">
+            <ul class="menu">
+                <li class="firstmenu"><a href="#">Home</a></li>
+                <li><a href="#">Produse</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Despre Noi</a></li>
+                <li id="lastmenu"><a href="#">Catalog</a></li>
+            </ul>
+        </div>
+        <div class="cl"></div>
+    </div>
+    <div class="bodyContent">
+        <div class="container">
+			<div id="litlenav">
+				<a href="#"><img class="sliderElement" id="slide_pager_1" src="<?php echo $this->getSkinUrl() ?>images/grey_btn.png" width="20" height="20" /></a>
+				<a href="#"><img class="sliderElement" id="slide_pager_2" src="<?php echo $this->getSkinUrl() ?>images/grey_btn.png" width="20" height="20" /></a>
+				<a href="#"><img class="sliderElement" id="slide_pager_3" src="<?php echo $this->getSkinUrl() ?>images/grey_btn.png" width="20" height="20" /></a>
+			</div>
+            <div class="sliders">
+                <img id="slide_1" src="<?php echo $this->getSkinUrl() ?>images/wallpapers/x.jpg" width="620" height="400" />
+                <img id="slide_2" src="<?php echo $this->getSkinUrl() ?>images/wallpapers/y.jpg" width="620" height="400" />
+                <img id="slide_3" src="<?php echo $this->getSkinUrl() ?>images/wallpapers/z.jpg" width="620" height="400" />
+            </div>
+            <div class="shadow">
+            </div>
+            <div class="leftcontainer">
+                <div id="firstcont" style="float: right;border:solid 1px #A8A8A8;">
+                    <div class="ltlShadow">
+                    </div>
+                    <div class="inShadow">
+                  &nbsp; &nbsp;  Promotii canapea x 
+                    </div>
+                    <img src="<?php echo $this->getSkinUrl() ?>images/left/x.jpg" width="278" height="130" /></div>
+                <div id="secondcont" style="float: right;border:solid 1px #A8A8A8;">
+                    <div class="ltlShadow">
+                    </div>
+                     <div class="inShadow">
+                   &nbsp; &nbsp; Promotii canapea y 
+                    </div>
+                    <img src="<?php echo $this->getSkinUrl() ?>images/left/y.jpg" width="278" height="130" /></div>
+                <div id="thirdcont" style="float: right;border:solid 1px #A8A8A8;">
+                    <div class="ltlShadow">
+                    </div>
+                     <div class="inShadow">
+                  &nbsp; &nbsp; Promotii canapea z 
+                    </div>
+                    <img src="<?php echo $this->getSkinUrl() ?>images/left/z.jpg" width="278" height="130" /></div>
+            </div>
+        </div>
+    </div>
+	<div class="cl"></div>
+	<div class="cl"></div>
+    <div class="footer">
+        <div class="infooter">
+            <ul class="footermenu">
+                 <li class="footer_x"></li> 
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Produse</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Despre Noi</a></li>
+                  <li class="lastmenu" ><a href="#">Catalog</a></li>
+            </ul>
+        </div>
+    </div>
+	
+	<script type="text/javascript">
+		$j(document).ready(function () {
+		var html ='<a href="#" class="activeSlide"><img width="20" height="20" src="images/red_btn.png" /></a>';
+		$j('.activeSlide').each(function(){replaceWith(html);});
+			$j('.sliders').cycle({ 
+				fx:     'fade', 
+				speed:  'slow', 
+				timeout: 7000,
+				pager:  '#litlenav', 
+				pagerAnchorBuilder: function(idx, slide) { 
+					// return selector string for existing anchor // #litlenav a:eq(' + idx + ')
+					return '#litlenav a:eq(' + idx + ')';
+					 //return '<a href="#"><img src="<?php echo $this->getSkinUrl()?>images/grey_btn.png" width="20" height="20" /></a>'; 
+					//return $j('#litlenav .activeSlide').replaceWith('<a href="#" class="activeSlide"><img src="<?php echo $this->getSkinUrl()?>images/red_btn.png" width="20" height="20" /></a>');
+				
+				},
+				before: function (curr, next, opts) {
+					$j('.sliderElement').each(function(){
+						$j(this).attr('src','<?php echo $this->getSkinUrl() ?>images/grey_btn.png');
+					});
+					
+					slide_id = next.id;
+					parts = slide_id.split('_');
+					slide_nr = parts[1];
+					$j('#slide_pager_'+slide_nr).attr('src','<?php echo $this->getSkinUrl() ?>images/red_btn.png');
+				}
+			});
+		});
+    </script>
+</body>
+
+</html>
