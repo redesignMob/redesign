@@ -85,7 +85,9 @@ Default layout, loads most of the pages
                     <action method="setElementClass"><value>top-container</value></action>
                 </block>
             </block>
-
+            <block type="core/text_list" name="main.menu" as="mainMenu" translate="label">
+                <label>Main Menu</label>
+            </block>
             <block type="page/html_breadcrumbs" name="breadcrumbs" as="breadcrumbs"/>
 
             <block type="core/text_list" name="left" as="left" translate="label">
@@ -183,6 +185,11 @@ Default layout, loads most of the pages
             <action method="setTemplate"><template>page/2columns-right.phtml</template></action>
             <!-- Mark root page block that template is applied -->
             <action method="setIsHandle"><applied>1</applied></action>
+        </reference>
+        <reference name="main.menu">
+            <block type="cms/block" name="main-menu-block">
+                <action method="setBlockId"><block_id>top-menu-homepage</block_id></action>
+            </block>
         </reference>
     </page_two_columns_right>
 
