@@ -42,13 +42,14 @@
             <img src="<?php echo $this->getSkinUrl() ?>images/logo4.png" width="400" height="75" />
         </div>
         <div class="navigation">
-            <ul class="menu">
+<!--            <ul class="menu">
                 <li class="firstmenu"><a href="#">Home</a></li>
                 <li><a href="#">Produse</a></li>
                 <li><a href="#">Contact</a></li>
                 <li><a href="#">Despre Noi</a></li>
                 <li id="lastmenu"><a href="#">Catalog</a></li>
-            </ul>
+            </ul>-->
+            <?php echo $this->getChildHtml('mainMenu'); ?>
         </div>
         <div class="cl"></div>
     </div>
