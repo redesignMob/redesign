@@ -168,11 +168,11 @@ Compare products page
         </reference>
     </catalog_product_compare_index>
 
-    <customer_account_index>
+     <customer_account_index>
         <reference name="right">
             <action method="unsetChild"><name>catalog.compare.sidebar</name></action>
         </reference>
-    </customer_account_index>
+    </customer_account_index> 
 
 <!--
 Product view

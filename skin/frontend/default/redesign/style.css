@@ -1,5 +1,9 @@
-﻿body
-{
+﻿
+* { margin:0;padding:0;}
+
+body
+{	margin:0;
+	padding:0;
     height: 700px;
     background: #F8F8F8;
 	text-align: left !important;
@@ -34,19 +38,19 @@ a
 /* logo section */
 .logo
 {
-    width: 100px;
     height: 100px;
-    top: -10px;
     float: left;
-    position: relative;
-}
+    }
+ .logo:hover {cursor:pointer;}
 /* menu section */
 .navigation
 {
+	float:right;
+    margin-left:30px;
+	float:left;
     position: relative;
-    width: 500px;
     height: 100px;
-    margin: 0 auto; /* border-radius: 50px 50px 0px 0px;  background:  url('images/bg_header.png') repeat-x scroll; 	behavior: url(ie-css3.htc);*/
+   /* border-radius: 50px 50px 0px 0px;  background:  url('images/bg_header.png') repeat-x scroll; 	behavior: url(ie-css3.htc);*/
 }
 .menu
 {
@@ -54,7 +58,6 @@ a
     position: relative;
     padding-left: 0;
     top: 20px;
-    left: 120px;
     height: 40px;
    -webkit-padding-start: 0px; /*background: url('images/globalnav.png') repeat-x 0 -41px;*/
     background: url('images/nav7.png') repeat-x scroll;
@@ -93,7 +96,7 @@ a
 {
     background: none;
     border-radius: 0 50px 50px 0;
-    width: auto;
+    
 }
 #lastmenu:hover
 {
@@ -101,7 +104,7 @@ a
     background: url('images/nav_hover1.png') repeat-x !important;
     margin-left: 0px;
     margin-right: 0px !important;
-    width: 66px;
+    
 }
 
 .menu li a
@@ -133,7 +136,7 @@ a
     height: 500px;
     border-radius: 51px 0px 51px 0px; /*background:  url('images/body.png') repeat-x scroll;}*/
     background-color: #D8D8D8;
-    box-shadow: 1px 1px 30px #000;
+    box-shadow: 1px 1px 10px #444444;
     behavior: url(ie-css3.htc);
 }
 .container
@@ -264,17 +267,17 @@ a
 .footer
 {
     z-index: 100;
-    width: 105%;
+    width: 100%;
     height: 40px;
     background:Black url('images/nav9.png') repeat-x scroll;
     bottom: 0px !important;
-    margin-left:-10px;
-	box-shadow: 1px 1px 30px #000;
+   	box-shadow: 1px 1px 30px #000;
 }
 .footermenu
 {
     position: relative;
 	top: 16px;
+	
 }
 
 .footermenu li
@@ -325,5 +328,7 @@ a
 #leftmenu  li:hover { margin:0 auto;height:30px; background: url('images/nav_hover2.png') repeat-x scroll; cursor: pointer;  border-radius: 50px 50px 50px 50px;margin-bottom:5px;}
 #leftmenu  li  .level1{ margin-top:15px;margin-left:20px;height:30px;background: url('images/nav8.png')  repeat-x scroll;  border-radius: 50px 50px 50px 50px;margin-bottom:5px;}
 #leftmenu  li .level1:hover { margin-top:15px;margin-left:20px;height:30px;height:30px; background: url('images/nav_hover2.png') repeat-x scroll; cursor: pointer;  border-radius: 50px 50px 50px 50px;margin-bottom:3px;}
-#leftmenu  li  a{margin-top:1px;text-decoration:none;align:center;color:#F8F8F8;margin-left:40px;}
+#leftmenu  li  a{margin-top:1px;text-decoration:none;align:center;color:#F8F8F8;margin-left:55px;}
+#leftmenu  li  a span {position:relative;top:5px;}
 button.button span { display:block; height:19px;border-radius: 20px 20px 20px 20px; background: url('images/button_Red.png') repeat-x scroll; padding:0 8px; font:bold 12px/19px Arial, Helvetica, sans-serif; text-align:center; white-space:nowrap; color:#fff; }
+.block .block-title { background:url(images/block-head.png) 0 0 repeat-x transparent; border-bottom:1px solid #ddd;border-radius:10px 0 0 0; padding:2px 9px; }
