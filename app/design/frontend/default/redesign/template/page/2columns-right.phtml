@@ -42,53 +42,41 @@
             <img src="<?php echo $this->getSkinUrl() ?>images/logo4.png" width="400" height="75" />
         </div>
         <div class="navigation">
-<!--            <ul class="menu">
-                <li class="firstmenu"><a href="#">Home</a></li>
-                <li><a href="#">Produse</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Despre Noi</a></li>
-                <li id="lastmenu"><a href="#">Catalog</a></li>
-            </ul>-->
             <?php echo $this->getChildHtml('mainMenu'); ?>
         </div>
         <div class="cl"></div>
     </div>
     <div class="bodyContent">
         <div class="container">
-			<div id="litlenav">
-				<a href="#"><img class="sliderElement" id="slide_pager_1" src="<?php echo $this->getSkinUrl() ?>images/grey_btn.png" width="20" height="20" /></a>
-				<a href="#"><img class="sliderElement" id="slide_pager_2" src="<?php echo $this->getSkinUrl() ?>images/grey_btn.png" width="20" height="20" /></a>
-				<a href="#"><img class="sliderElement" id="slide_pager_3" src="<?php echo $this->getSkinUrl() ?>images/grey_btn.png" width="20" height="20" /></a>
-			</div>
-            <div class="sliders">
-                <img id="slide_1" src="<?php echo $this->getSkinUrl() ?>images/wallpapers/x.jpg" width="620" height="400" />
-                <img id="slide_2" src="<?php echo $this->getSkinUrl() ?>images/wallpapers/y.jpg" width="620" height="400" />
-                <img id="slide_3" src="<?php echo $this->getSkinUrl() ?>images/wallpapers/z.jpg" width="620" height="400" />
-            </div>
+            <?php echo $this->getChildHtml('content'); ?>
             <div class="shadow">
             </div>
             <div class="leftcontainer">
-                <div id="firstcont" style="float: right;border:solid 1px #A8A8A8;">
+                <?php echo $this->getChildHtml('right'); ?>
+<!--            <div id="firstcont" style="float: right;border:solid 1px #A8A8A8;">
                     <div class="ltlShadow">
                     </div>
                     <div class="inShadow">
                   &nbsp; &nbsp;  Promotii canapea x 
                     </div>
-                    <img src="<?php echo $this->getSkinUrl() ?>images/left/x.jpg" width="278" height="130" /></div>
+                    <img src="<?php echo $this->getSkinUrl() ?>images/left/x.jpg" width="278" height="130" />
+                </div>
                 <div id="secondcont" style="float: right;border:solid 1px #A8A8A8;">
                     <div class="ltlShadow">
                     </div>
                      <div class="inShadow">
                    &nbsp; &nbsp; Promotii canapea y 
                     </div>
-                    <img src="<?php echo $this->getSkinUrl() ?>images/left/y.jpg" width="278" height="130" /></div>
+                    <img src="<?php echo $this->getSkinUrl() ?>images/left/y.jpg" width="278" height="130" />
+                </div>
                 <div id="thirdcont" style="float: right;border:solid 1px #A8A8A8;">
                     <div class="ltlShadow">
                     </div>
                      <div class="inShadow">
-                  &nbsp; &nbsp; Promotii canapea z 
+                        &nbsp; &nbsp; Promotii canapea z 
                     </div>
-                    <img src="<?php echo $this->getSkinUrl() ?>images/left/z.jpg" width="278" height="130" /></div>
+                    <img src="<?php echo $this->getSkinUrl() ?>images/left/z.jpg" width="278" height="130" />
+                </div>-->
             </div>
         </div>
     </div>
@@ -106,36 +94,5 @@
             </ul>
         </div>
     </div>
-	
-	<script type="text/javascript">
-		$j(document).ready(function () {
-		var html ='<a href="#" class="activeSlide"><img width="20" height="20" src="images/red_btn.png" /></a>';
-		$j('.activeSlide').each(function(){replaceWith(html);});
-			$j('.sliders').cycle({ 
-				fx:     'fade', 
-				speed:  'slow', 
-				timeout: 7000,
-				pager:  '#litlenav', 
-				pagerAnchorBuilder: function(idx, slide) { 
-					// return selector string for existing anchor // #litlenav a:eq(' + idx + ')
-					return '#litlenav a:eq(' + idx + ')';
-					 //return '<a href="#"><img src="<?php echo $this->getSkinUrl()?>images/grey_btn.png" width="20" height="20" /></a>'; 
-					//return $j('#litlenav .activeSlide').replaceWith('<a href="#" class="activeSlide"><img src="<?php echo $this->getSkinUrl()?>images/red_btn.png" width="20" height="20" /></a>');
-				
-				},
-				before: function (curr, next, opts) {
-					$j('.sliderElement').each(function(){
-						$j(this).attr('src','<?php echo $this->getSkinUrl() ?>images/grey_btn.png');
-					});
-					
-					slide_id = next.id;
-					parts = slide_id.split('_');
-					slide_nr = parts[1];
-					$j('#slide_pager_'+slide_nr).attr('src','<?php echo $this->getSkinUrl() ?>images/red_btn.png');
-				}
-			});
-		});
-    </script>
 </body>
-
 </html>

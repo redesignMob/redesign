@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.1.0">
+    <cms_index_index>
+        <reference name="main.menu">
+            <block type="cms/block" name="main-menu-block">
+                <action method="setBlockId"><block_id>top-menu-homepage</block_id></action>
+            </block>
+        </reference>
+        <reference name="content">
+            <action method="unsetChildren" />
+            <block type="homepage/slider" name="home_slider" as="home_slider" template="homepage/slider.phtml" />
+        </reference>
+        <reference name="right">
+            <action method="unsetChildren" />
+            <block type="homepage/promotion" name="home_promotion" as="home_promotion" template="homepage/promotion.phtml" />
+        </reference>
+    </cms_index_index>
+</layout>

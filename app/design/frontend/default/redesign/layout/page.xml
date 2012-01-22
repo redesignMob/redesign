@@ -186,11 +186,6 @@ Default layout, loads most of the pages
             <!-- Mark root page block that template is applied -->
             <action method="setIsHandle"><applied>1</applied></action>
         </reference>
-        <reference name="main.menu">
-            <block type="cms/block" name="main-menu-block">
-                <action method="setBlockId"><block_id>top-menu-homepage</block_id></action>
-            </block>
-        </reference>
     </page_two_columns_right>
 
     <page_three_columns translate="label">
