@@ -85,9 +85,15 @@ Default layout, loads most of the pages
                     <action method="setElementClass"><value>top-container</value></action>
                 </block>
             </block>
+            
             <block type="core/text_list" name="main.menu" as="mainMenu" translate="label">
                 <label>Main Menu</label>
             </block>
+            
+            <block type="core/text_list" name="footer.menu" as="footerMenu" translate="label">
+                <label>Footer Menu</label>
+            </block>
+            
             <block type="page/html_breadcrumbs" name="breadcrumbs" as="breadcrumbs"/>
 
             <block type="core/text_list" name="left" as="left" translate="label">
