@@ -1,0 +1,17 @@
+<?php
+
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+$collection_categories = $this->getCollectionCategories();
+?>
+
+<?php foreach($collection_categories as $category) : ?>
+    <div>
+        <a href="<?php echo $this->getBaseUrl() . $category->getUrlPath() ?>">
+            <img src="<?php echo $category->getImageUrl() ?>" />
+            <p><?php echo $category->getName() ?></p>
+        </a>
+    </div>
+<?php endforeach; ?>
