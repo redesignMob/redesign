@@ -29,6 +29,12 @@ if (version_compare(phpversion(), '5.2.0', '<')===true) {
     exit;
 }
 
+function pr($arr) {
+    echo "<pre>";
+    print_r($arr);
+    echo "</pre>";
+}
+
 /**
  * Error reporting
  */
