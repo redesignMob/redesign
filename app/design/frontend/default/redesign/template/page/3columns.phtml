@@ -41,13 +41,7 @@
             <img src="<?php echo $this->getSkinUrl() ?>images/logo4.png" width="300" height="75" />
         </div>
         <div class="navigation">
-            <ul class="menu">
-                <li class="firstmenu"><a href="#">Home</a></li>
-                <li><a href="#">Produse</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Despre Noi</a></li>
-                <li id="lastmenu"><a href="#">Catalog</a></li>
-            </ul>
+            <?php echo $this->getChildHtml('mainMenu'); ?>
         </div>
        
     </div>
@@ -78,14 +72,7 @@
 </div>
 <div class="footer">
         <div class="infooter">
-            <ul class="footermenu">
-                 <li class="footer_x"></li> 
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Produse</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Despre Noi</a></li>
-                  <li class="lastmenu" ><a href="#">Catalog</a></li>
-            </ul>
+            <?php echo $this->getChildHtml('footerMenu') ?>
         </div>
     </div>
 </body>

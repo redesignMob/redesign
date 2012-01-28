@@ -53,30 +53,6 @@
             </div>
             <div class="leftcontainer">
                 <?php echo $this->getChildHtml('right'); ?>
-<!--            <div id="firstcont" style="float: right;border:solid 1px #A8A8A8;">
-                    <div class="ltlShadow">
-                    </div>
-                    <div class="inShadow">
-                  &nbsp; &nbsp;  Promotii canapea x 
-                    </div>
-                    <img src="<?php echo $this->getSkinUrl() ?>images/left/x.jpg" width="278" height="130" />
-                </div>
-                <div id="secondcont" style="float: right;border:solid 1px #A8A8A8;">
-                    <div class="ltlShadow">
-                    </div>
-                     <div class="inShadow">
-                   &nbsp; &nbsp; Promotii canapea y 
-                    </div>
-                    <img src="<?php echo $this->getSkinUrl() ?>images/left/y.jpg" width="278" height="130" />
-                </div>
-                <div id="thirdcont" style="float: right;border:solid 1px #A8A8A8;">
-                    <div class="ltlShadow">
-                    </div>
-                     <div class="inShadow">
-                        &nbsp; &nbsp; Promotii canapea z 
-                    </div>
-                    <img src="<?php echo $this->getSkinUrl() ?>images/left/z.jpg" width="278" height="130" />
-                </div>-->
             </div>
         </div>
     </div>
@@ -84,14 +60,7 @@
 	<div class="cl"></div>
     <div class="footer">
         <div class="infooter">
-            <ul class="footermenu">
-                 <li class="footer_x"></li> 
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Produse</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Despre Noi</a></li>
-                  <li class="lastmenu" ><a href="#">Catalog</a></li>
-            </ul>
+            <?php echo $this->getChildHtml('footerMenu') ?>
         </div>
     </div>
 </body>
