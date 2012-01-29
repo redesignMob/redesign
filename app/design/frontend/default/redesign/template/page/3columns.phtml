@@ -36,22 +36,21 @@
 <?php echo $this->getChildHtml('head') ?>
 </head>
 <body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?>>
- <div class="header">
-        <div class="logo">
-            <img src="<?php echo $this->getSkinUrl() ?>images/logo4.png" width="300" height="75" />
-        </div>
-        <div class="navigation">
-            <?php echo $this->getChildHtml('mainMenu'); ?>
-        </div>
-       
+ <div class="header"> 
+    <?php echo $this->getChildHtml('header') ?>
+    <div class="logo">
+        <img src="<?php echo $this->getSkinUrl() ?>images/logo4.png" width="300" height="75" />
     </div>
-	<div style="width:7px;clear:both"></div>
+    <div class="navigation">
+        <?php echo $this->getChildHtml('mainMenu'); ?>
+    </div>
+ </div>
+<div style="width:7px;clear:both"></div>
 	
 <?php echo $this->getChildHtml('after_body_start') ?>
 <div class="wrapper">
     <?php echo $this->getChildHtml('global_notices') ?>
     <div class="page">
-        <!--<?php echo $this->getChildHtml('header') ?>-->
         <div class="main-container col3-layout">
             <div class="main">
                 <?php echo $this->getChildHtml('breadcrumbs') ?>
@@ -65,9 +64,8 @@
                 <div class="col-right sidebar"><?php echo $this->getChildHtml('right') ?></div>
             </div>
         </div>
-		<div class="cl"></div>
-		<div class="cl"></div>
-        
+        <div class="cl"></div>
+        <div class="cl"></div>
     </div>
 </div>
 <div class="footer">
