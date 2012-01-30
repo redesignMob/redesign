@@ -213,8 +213,9 @@ a
     float: right;
     margin-top: -500px;
     margin-right: 0px;
+	
 }
-
+.leftcontainer a {text-decoration:none !important;color:White;}
 #firstcont
 {
     color: White;
@@ -328,7 +329,10 @@ a
 #leftmenu  li:hover { margin:0 auto;height:30px; background: url('images/nav_hover2.png') repeat-x scroll; cursor: pointer;  border-radius: 50px 50px 50px 50px;margin-bottom:5px;}
 #leftmenu  li  .level1{ margin-top:15px;margin-left:20px;height:30px;background: url('images/nav8.png')  repeat-x scroll;  border-radius: 50px 50px 50px 50px;margin-bottom:5px;}
 #leftmenu  li .level1:hover { margin-top:15px;margin-left:20px;height:30px;height:30px; background: url('images/nav_hover2.png') repeat-x scroll; cursor: pointer;  border-radius: 50px 50px 50px 50px;margin-bottom:3px;}
-#leftmenu  li  a{margin-top:1px;text-decoration:none;align:center;color:#F8F8F8;margin-left:55px;}
+#leftmenu  li  a{margin-top:1px;text-decoration:none;text-align:center;color:#F8F8F8;margin-left:55px;}
 #leftmenu  li  a span {position:relative;top:5px;}
 button.button span { display:block; height:19px;border-radius: 20px 20px 20px 20px; background: url('images/button_Red.png') repeat-x scroll; padding:0 8px; font:bold 12px/19px Arial, Helvetica, sans-serif; text-align:center; white-space:nowrap; color:#fff; }
 .block .block-title { background:url(images/block-head.png) 0 0 repeat-x transparent; border-bottom:1px solid #ddd;border-radius:10px 0 0 0; padding:2px 9px; }
+#leftmenu  li.level0  ul.level0  {margin-top:25px;margin-bottom:300px;}
+.block-subscribe {margin-top:400px;}
+ul.level0  li.level1 a {margin-left:25px !important;}
