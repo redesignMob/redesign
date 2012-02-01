@@ -336,3 +336,4 @@ button.button span { display:block; height:19px;border-radius: 20px 20px 20px 20
 #leftmenu  li.level0  ul.level0  {margin-top:25px;margin-bottom:300px;}
 .block-subscribe {margin-top:400px;}
 ul.level0  li.level1 a {margin-left:25px !important;}
+.bigcolections {display:none;}

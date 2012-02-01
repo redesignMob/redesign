@@ -8,7 +8,7 @@ $type_categories = $this->getTypeCategories();
 ?>
 
 <?php foreach($type_categories as $category) : ?>
-    <div style="float:left;position:relative;margin:10px">
+    <div  class="bigcolections" style="float:left;position:relative;margin:10px">
         <a href="<?php echo $this->getBaseUrl() . $category->getUrlPath() ?>">
             <img src="<?php echo $category->getImageUrl() ?>" />
         </a>
