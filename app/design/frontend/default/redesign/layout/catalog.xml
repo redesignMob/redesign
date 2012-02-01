@@ -59,8 +59,9 @@ Default layout, loads most of the pages
 			<block type="catalog/navigation" name="catalog.topnav.left" template="catalog/navigation/leftmenu.phtml"/>
         </reference>
         <reference name="right">
+            <!--
             <block type="catalog/product_compare_sidebar" before="cart_sidebar" name="catalog.compare.sidebar" template="catalog/product/compare/sidebar.phtml"/>
-           <!-- <block type="core/template" name="right.permanent.callout" template="callouts/right_col.phtml">
+            <block type="core/template" name="right.permanent.callout" template="callouts/right_col.phtml">
                 <action method="setImgSrc"><src>images/media/col_right_callout.jpg</src></action>
                 <action method="setImgAlt" translate="alt" module="catalog"><alt>Keep your eyes open for our special Back to School items and save A LOT!</alt></action>
             </block>-->
@@ -78,9 +79,11 @@ Category default layout
 
     <catalog_category_default translate="label">
         <label>Catalog Category (Non-Anchor)</label>
+        <!--
         <reference name="left">
           <!--  <block type="catalog/navigation" name="catalog.leftnav" after="currency" template="catalog/navigation/left.phtml"/>-->
         </reference>
+        -->
         <reference name="content">
             <block type="catalog/category_view" name="category.products" template="catalog/category/view.phtml">
                 <block type="catalog/product_list" name="product_list" template="catalog/product/list.phtml">
