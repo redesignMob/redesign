@@ -496,12 +496,13 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* Header ================================================================================ */
 .logo { float:left; }
-.header-container {}
+.header-container {height:20px!important;}
 
 
 .header .logo strong { position:absolute; top:-999em; left:-999em; width:0; height:0; font-size:0; line-height:0; text-indent:-999em; overflow:hidden; }
 .header h1.logo { margin:0; }
-.header .quick-access { float:right; width:600px; padding:28px 10px 0 0; }
+.header .quick-access { float:right;text-decoration:none; width:600px; padding:10px 10px 10px 0; }
+.header .quick-access  .links  li a {font-weight:bold;text-decoration:none;}
 .header .welcome-msg { margin:0; color:#fff; text-align:right; }
 .header .welcome-msg a { color:#ebbc58; }
 .header .form-search { position:absolute; top:0; right:29px; width:315px; height:30px; background:url(../images/bkg_form-search.gif) 0 0 no-repeat; padding:1px 0 0 16px; }
@@ -522,7 +523,7 @@ tr.summary-details-excluded { font-style:italic; }
 .header .form-language select.flags option { background-position:4px 50%; background-repeat:no-repeat; padding-left:25px; }
 .header .links { float:right; margin:0 0 6px; }
 .header .links li { float:left; font-size:11px; background:url(../images/bkg_pipe1.gif) 100% 60% no-repeat; padding:0 8px 0 7px; }
-.header .links a { color:#ebbc58; }
+.header .links a { color:Red; }
 .header-container .top-container { clear:both; padding:5px 10px 0 12px; text-align:right; }
 .header-container .top-container a { font-size:11px; color:#ebbc58; }
 
