@@ -81,7 +81,7 @@ Category default layout
         <label>Catalog Category (Non-Anchor)</label>
         <!--
         <reference name="left">
-          <!--  <block type="catalog/navigation" name="catalog.leftnav" after="currency" template="catalog/navigation/left.phtml"/>-->
+          <block type="catalog/navigation" name="catalog.leftnav" after="currency" template="catalog/navigation/left.phtml"/>
         </reference>
         -->
         <reference name="content">
