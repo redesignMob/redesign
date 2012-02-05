@@ -45,9 +45,11 @@ Default layout, loads most of the pages
     <default>
 
         <!-- Mage_Catalog -->
+        <!--
         <reference name="top.menu">
             <block type="catalog/navigation" name="catalog.topnav" template="catalog/navigation/top.phtml"/>
         </reference>
+        -->
         <reference name="left">
 			<!--
             <block type="core/template" name="left.permanent.callout" template="callouts/left_col.phtml">
