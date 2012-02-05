@@ -1,0 +1,55 @@
+<?php
+
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+$products = $this->getProducts();
+
+?>
+
+<div id="products_slider" style="border:1px solid #CCCCCC;background-color:#CDCDCD;overflow: hidden">
+    <div id="slider_container" style="position: relative; width:190px;height:525px; ">
+        <?php foreach($products as $_product) : ?>
+            <div style="margin:10px 35px;height:165px">
+                <a href="<?php echo $this->getBaseUrl() . $_product->getUrlPath() ?>">
+                    <img src="<?php echo Mage::helper('catalog/image')->init($_product, 'small_image')->resize(120); ?>" width="120" height="120" />
+                </a>
+                <p style="margin:0;padding:0;font-size:13px;font-weight:bold"><?php echo $_product->getName() ?></p>
+            </div>
+        <?php endforeach; ?>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    $j(document).ready(function(){
+        var stashed = null;
+        
+        // Recursive next image function
+        var nextImage = function() {
+
+            // Add next image
+            $j("#slider_container").append(stashed);
+
+            // Animate the slider
+            $j("#slider_container").animate({
+                top: '-=175'
+            }, 2000, function() {
+
+                // Remove image to the left
+                stashed = $j("#slider_container div:first");
+                $j("#slider_container div:first").remove();
+
+                // Reset CSS
+                $j("#slider_container").css("top", "0px");
+                
+                setTimeout(function() { nextImage(); }, 3500);    
+            });  
+        }
+
+        // Call next image for the first time
+        setTimeout(function() { nextImage(); }, 2000);       
+        });
+</script>
