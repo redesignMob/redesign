@@ -201,6 +201,31 @@ Product.Config.prototype = {
                 }
             }
         }
+        
+        if(attributeId == 85) {
+            element.hide();
+            this.displayColorImages(options,attributeId);
+        }
+    },
+    
+    displayColorImages: function(options,attributeId) {
+        options.each(function(item) {
+            new Ajax.Request(baseUrl + 'configurable/product/attribute/id/'+item.id, {
+                method: 'get',
+                onSuccess: function(transport) {
+                    $j('#attrImages-'+attributeId).append(transport.responseText);
+                }
+            });
+        });
+        
+        $j('#attrImages-'+attributeId).append('<div style="clear:both"></div>');
+    },
+    
+    setOption: function(optionId) {
+        colorAttributeId = 85;
+        
+        $j('#attribute'+colorAttributeId).val(optionId);
+        this.reloadPrice();
     },
 
     getOptionLabel: function(option, price){
@@ -267,7 +292,19 @@ Product.Config.prototype = {
             return this.config.attributes[attributeId].options;
         }
     },
-
+    
+    changeImage: function(productId) {
+        $('ajax_loader').show();
+        new Ajax.Request(baseUrl + 'configurable/product/image/id/'+productId, {
+            method: 'get',
+            onSuccess: function(transport) {
+                //console.log(transport.responseText);
+                $('image').src = transport.responseText;
+                 $('ajax_loader').hide();
+            }
+        });
+    },
+    
     reloadPrice: function(){
         if (this.config.disablePriceReload) {
             return;
@@ -279,9 +316,13 @@ Product.Config.prototype = {
             if(selected.config){
                 price    += parseFloat(selected.config.price);
                 oldPrice += parseFloat(selected.config.oldPrice);
+                selectedProductId = selected.config.products;
+                this.changeImage(selectedProductId);
+            } else {
+                this.changeImage(this.config.productId);
             }
         }
-
+        
         optionsPrice.changePrice('config', {'price': price, 'oldPrice': oldPrice});
         optionsPrice.reload();
 
