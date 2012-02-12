@@ -3,9 +3,6 @@
     <default>
         <reference name="catalog.leftnav">
             <action method="unsetChild"><alias>category_filter</alias></action>
-        </reference> 
-        <reference name="content">
-            <block type="categories/collections" name="cat_types" as="cat_types" template="collections/types.phtml" />
         </reference>
     </default>
 </layout>

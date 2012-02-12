@@ -39,6 +39,7 @@ $_attributes = Mage::helper('core')->decorateArray($this->getAllowAttributes());
                     <option><?php echo $this->__('Choose an Option...') ?></option>
                   </select>
               </div>
+			<div id="ajax_loader_colors" style="display:none;z-index:100;position:absolute;top:45px;left:240px;width:30px;height:30px;"><img src="<?php echo $this->getSkinUrl('images/ajaxLoader.gif') ?>" /></div>
             <div style="position:relative;height:30px" id="attrImages-<?php echo $_attribute->getAttributeId() ?>"></div>
         </dd>
     <?php endforeach; ?>

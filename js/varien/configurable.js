@@ -210,10 +210,12 @@ Product.Config.prototype = {
     
     displayColorImages: function(options,attributeId) {
         options.each(function(item) {
+			$('ajax_loader_colors').show();
             new Ajax.Request(baseUrl + 'configurable/product/attribute/id/'+item.id, {
                 method: 'get',
                 onSuccess: function(transport) {
                     $j('#attrImages-'+attributeId).append(transport.responseText);
+					$('ajax_loader_colors').hide();
                 }
             });
         });

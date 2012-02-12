@@ -107,7 +107,7 @@ ul,ol         { list-style:none; }
 /* Base Columns */
 .col-left { float:left; width:195px; padding:0 0 1px; }
 .col-main { float:left; width:685px; padding:0 0 1px; }
-.col-right { float:right; width:195px; padding:0 0 1px; }
+.col-right { float:right; width:195px; padding:0 0 1px;margin-top:41px; }
 
 /* 1 Column Layout */
 .col1-layout .col-main { float:none; width:auto; }
@@ -123,7 +123,7 @@ ul,ol         { list-style:none; }
 
 /* Content Columns */
 .col2-set .col-1 { float:left; width:48.5%; }
-.col2-set .col-2 { float:right; width:48.5%; }
+.col2-set .col-2 { margin-left:250px; width:48.5%; }
 .col2-set .col-narrow { width:32%; }
 .col2-set .col-wide { width:65%; }
 
@@ -141,7 +141,7 @@ ul,ol         { list-style:none; }
 /* Global Styles ========================================================================= */
 /* Form Elements */
 input,select,textarea,button { font:12px/15px Arial, Helvetica, sans-serif; vertical-align:middle; color:#2f2f2f; }
-input.input-text,select,textarea { background:#fff; border:1px solid #b6b6b6; }
+input.input-text,select,textarea { background:#fff; border:1px solid #b6b6b6;border-radius:5px; }
 input.input-text,textarea { padding:2px; }
 select { padding:1px; }
 select option { padding-right:10px; }
@@ -153,8 +153,35 @@ input.checkbox { margin-right:3px; }
 input.qty { width:2.5em !important; }
 button.button::-moz-focus-inner { padding:0; border:0; } /* FF Fix */
 button.button { -webkit-border-fit:lines; } /* <- Safari & Google Chrome Fix */
-button.button {border-radius: 20px 20px 20px 20px; box-shadow: 1px 1px 6px #000;overflow:visible; width:auto; border:0; padding:0; margin:0; background:transparent; cursor:pointer; }
+button.button {
+				border-radius: 10px 10px 10px 10px;
+				box-shadow: 1px 1px 6px #000;
+				overflow: visible;
+				width: auto;
+				border: 0;
+				padding: 0;
+				margin: 0;
+				cursor: pointer;
+				height: 25px;
+				padding: 0 20px 0;
+				background-image: linear-gradient(bottom, rgb(69,5,16) 0%, rgb(82,6,13) 100%, rgb(204,8,8) 49%);
+			background-image: -o-linear-gradient(bottom, rgb(69,5,16) 0%, rgb(82,6,13) 100%, rgb(204,8,8) 49%);
+			background-image: -moz-linear-gradient(bottom, rgb(69,5,16) 0%, rgb(82,6,13) 100%, rgb(204,8,8) 49%);
+			background-image: -webkit-linear-gradient(bottom, rgb(69,5,16) 0%, rgb(82,6,13) 100%, rgb(204,8,8) 49%);
+			background-image: -ms-linear-gradient(bottom, rgb(69,5,16) 0%, rgb(82,6,13) 100%, rgb(204,8,8) 49%);
 
+			background-image: -webkit-gradient(
+				linear,
+				left bottom,
+				left top,
+				color-stop(0, rgb(69,5,16)),
+				color-stop(1, rgb(82,6,13)),
+				color-stop(0.49, rgb(204,8,8))
+			);
+ }
+
+			
+			
 button.button span span { border:0; padding:0; }
 button.disabled span { border-color:Red !important; background:Red !important; }
 
@@ -172,8 +199,8 @@ input.input-text:focus,select:focus,textarea:focus { background-color:#edf7fd; }
 /* Form lists */
 /* Grouped fields */
 /*.form-list { width:535px; margin:0 auto; overflow:hidden; }*/
-.form-list li { margin:0 0 8px; }
-.form-list label { float:left; color:#666; font-weight:bold; position:relative; z-index:0; }
+.form-list li { margin:25px 75px 16px; }
+.form-list label {  color:#666;position:relative; font-size:12px; z-index:0; }
 .form-list label.required {}
 .form-list label.required em { float:right; font-style:normal; color:#eb340a; position:absolute; top:0; right:-8px; }
 .form-list li.control label { float:none; }
@@ -291,7 +318,14 @@ input.input-text:focus,select:focus,textarea:focus { background-color:#edf7fd; }
 .buttons-set-order { margin:10px 0 0; }
 .buttons-set-order .please-wait { padding:12px 7px 0 0; }
 
-.fieldset { border:1px solid #bbafa0; background:#fbfaf6; padding:22px 25px 12px 33px; margin:28px 0; }
+.fieldset { 
+border: 1px solid #BBAFA0;
+background: white;
+padding: 22px 25px 12px 33px;
+margin: 30px 20px;
+box-shadow: 1px 1px 10px #000;
+border-radius: 10px;
+} }
 .fieldset .legend { float:left; font-weight:bold; font-size:13px; border:1px solid #f19900; background:#f9f3e3; color:#e76200; margin:-33px 0 0 -10px; padding:0 8px; position:relative; }
 
 /* Form Validation */
@@ -523,7 +557,26 @@ tr.summary-details-excluded { font-style:italic; }
 .header .form-language select.flags option { background-position:4px 50%; background-repeat:no-repeat; padding-left:25px; }
 .header .links { float:right; margin:0 0 6px; }
 .header .links li { float:left; font-size:11px; background:url(../images/bkg_pipe1.gif) 100% 60% no-repeat; padding:0 8px 0 7px; }
-.header .links a { color:Red; }
+.header .links a {   box-shadow:1px 1px 10px #000;
+									border-radius:5px;
+											padding:7px;
+											color:white;
+											background-image: linear-gradient(bottom, rgb(120,9,24) 10%, rgb(161,27,34) 37%, rgb(214,3,3) 58%);
+						background-image: -o-linear-gradient(bottom, rgb(120,9,24) 10%, rgb(161,27,34) 37%, rgb(214,3,3) 58%);
+						background-image: -moz-linear-gradient(bottom, rgb(120,9,24) 10%, rgb(161,27,34) 37%, rgb(214,3,3) 58%);
+						background-image: -webkit-linear-gradient(bottom, rgb(120,9,24) 10%, rgb(161,27,34) 37%, rgb(214,3,3) 58%);
+						background-image: -ms-linear-gradient(bottom, rgb(120,9,24) 10%, rgb(161,27,34) 37%, rgb(214,3,3) 58%);
+
+						background-image: -webkit-gradient(
+							linear,
+							left bottom,
+							left top,
+							color-stop(0.1, rgb(120,9,24)),
+							color-stop(0.37, rgb(161,27,34)),
+							color-stop(0.58, rgb(214,3,3))
+						);
+					}
+.header .links a:hover {color:#D8D8D8;}
 .header-container .top-container { clear:both; padding:5px 10px 0 12px; text-align:right; }
 .header-container .top-container a { font-size:11px; color:#ebbc58; }
 
@@ -1449,11 +1502,17 @@ tr.summary-details-excluded { font-style:italic; }
 
 
 /* Account Login/Create Pages ============================================================ */
-.account-login .content { min-height:240px; padding:14px 21px; background:#faf7ee url(../images/bkg_login-box.gif) 0 0 repeat-x; border:1px solid #bbb6a5; border-bottom:0; }
+.account-login .content { margin-top:75px;min-height:240px; padding:14px 21px;background-color:#fff; border:1px solid #bbb6a5;border-radius:10px 10px 0 0; border-bottom:0;box-shadow:0px 0px 10px #000; }
 .account-login .content h2 { font-weight:bold; font-size:13px; margin:0 0 14px; padding:0 0 5px 23px; border-bottom:1px solid #ddd; background-position:0 1px; background-repeat:no-repeat; text-transform:uppercase; color:#e76200; }
 .account-login .new-users h2 { background-image:url(../images/i_page1.gif)}
 .account-login .registered-users h2 { background-image:url(../images/i_page2.gif); }
-.account-login .buttons-set { border:1px solid #bbb6a5; border-top:0; margin:0; padding:8px 13px; background:#dee5e8 url(../images/bkg_buttons-set1.gif) 0 0 repeat-x; }
+.account-login .buttons-set {border: 1px solid #BBB6A5;
+border-top: 0;
+margin: 0;
+padding: 8px 13px;
+background: white;
+border-radius: 0 0 10px 10px;
+box-shadow: 1px 1px 10px #000;}
 
 .account-create {}
 /* Account Login/Create Pages ============================================================ */

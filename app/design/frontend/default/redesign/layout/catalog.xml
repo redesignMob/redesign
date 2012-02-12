@@ -58,7 +58,7 @@ Default layout, loads most of the pages
                 <action method="setLinkUrl"><url>checkout/cart</url></action>
             </block>
 			-->
-			<block type="catalog/navigation" name="catalog.topnav.left" template="catalog/navigation/leftmenu.phtml"/>
+			<block type="catalog/navigation" name="catalog.topnav.left" as="catalog.topnav.left" template="catalog/navigation/leftmenu.phtml"/>
         </reference>
         <reference name="right">
             <!--
