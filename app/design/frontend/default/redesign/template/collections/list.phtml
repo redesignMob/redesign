@@ -8,12 +8,15 @@ $collection_categories = $this->getCollectionCategories();
 ?>
 
 <?php foreach($collection_categories as $category) : ?>
-<div style="width:700px;">
-    <div class="product-colections">
-        <a href="<?php echo $this->getBaseUrl() . $category->getUrlPath() ?>">
-            <img src="<?php echo $category->getImageUrl() ?>" width="180px" height="150px;"			/>
-            <p style="margin-top:-20px;"><?php echo $category->getName() ?></p>
-        </a>
-    </div>
+<div style="width:700px;margin-top:50px;">
+		<div style="float:left;">
+			<div class="product-colections" title="<?php echo $category->getName() ?>">
+				<a href="<?php echo $this->getBaseUrl() . $category->getUrlPath() ?>">
+					<img src="<?php echo $category->getImageUrl() ?>" width="180px" height="150px;"			/>
+            
+				</a>
+			</div>
+			<p style="margin-top:-15px;margin-left:40px;font-weight:Bold;"><?php echo $category->getName() ?></p>
+		</div>
 	</div>
 <?php endforeach; ?>

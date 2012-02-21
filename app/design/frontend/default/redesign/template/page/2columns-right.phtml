@@ -37,6 +37,7 @@
 </head>
 
 <body>
+<div>
     <div class="header">
         <?php echo $this->getChildHtml('header') ?>
         <div class="logo">
@@ -59,10 +60,11 @@
     </div>
 	<div class="cl"></div>
 	<div class="cl"></div>
-    <div class="footer">
+    <div class="footer" style="position:absolute !important;">
         <div class="infooter">
             <?php echo $this->getChildHtml('footerMenu') ?>
         </div>
     </div>
+</div>
 </body>
 </html>
