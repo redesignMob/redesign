@@ -42,19 +42,19 @@
     ?>
 </p>
 <div id="ajax_loader" style="display:none;z-index:100;position: absolute;top:540px;left:685px;width:30px;height:30px;"><img src="<?php echo $this->getSkinUrl('images/ajaxLoader.gif') ?>" /></div>
-<p class="zoom-notice" id="track_hint"><?php echo $this->__('Double click on above image to view full picture') ?></p>
-<div class="zoom">
+<!--<p class="zoom-notice" id="track_hint"><?php echo $this->__('Double click on above image to view full picture') ?></p>-->
+<!--<div class="zoom">
     <img id="zoom_out" src="<?php echo $this->getSkinUrl('images/slider_btn_zoom_out.gif') ?>" alt="<?php echo $this->__('Zoom Out') ?>" title="<?php echo $this->__('Zoom Out') ?>" class="btn-zoom-out" />
     <div id="track">
         <div id="handle"></div>
     </div>
     <img id="zoom_in" src="<?php echo $this->getSkinUrl('images/slider_btn_zoom_in.gif') ?>" alt="<?php echo $this->__('Zoom In') ?>" title="<?php echo $this->__('Zoom In') ?>" class="btn-zoom-in" />
-</div>
+</div>-->
 <script type="text/javascript">
 //<![CDATA[
-    Event.observe(window, 'load', function() {
+  /*  Event.observe(window, 'load', function() {
         product_zoom = new Product.Zoom('image', 'track', 'handle', 'zoom_in', 'zoom_out', 'track_hint');
-    });
+    });*/
 //]]>
 </script>
 <?php else: ?>
@@ -65,7 +65,7 @@
     ?>
 </p>
 <?php endif; ?>
-<?php if (count($this->getGalleryImages()) > 0): ?>
+<!--<?php if (count($this->getGalleryImages()) > 0): ?>
 <div class="more-views">
     <h2><?php echo $this->__('More Views') ?></h2>
     <ul>
@@ -76,4 +76,4 @@
     <?php endforeach; ?>
     </ul>
 </div>
-<?php endif; ?>
+<?php endif; ?>-->
