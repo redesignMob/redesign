@@ -632,10 +632,10 @@ tr.summary-details-excluded { font-style:italic; }
 .header .form-language select { padding:0; }
 .header .form-language select.flags option { background-position:4px 50%; background-repeat:no-repeat; padding-left:25px; }
 .header .links { float:right; margin:0 0 6px; }
-.header .links li { float:left; font-size:11px; background:url(../images/bkg_pipe1.gif) 100% 60% no-repeat; padding:0 8px 0 7px; }
+.header .links li { margin-top:10px;float:left; font-size:11px; background:url(../images/bkg_pipe1.gif) 100% 60% no-repeat; padding:0 8px 0 7px; }
 .header .links a {   box-shadow:1px 1px 6px #000;
 									border-radius:10px;
-											padding-left:12px;padding-right:12px;padding-top:9px;padding-bottom:9px;
+											padding-left:12px;padding-right:12px;padding-top:6px;padding-bottom:6px;
 											color:white;
 											background-image: linear-gradient(bottom, rgb(120,9,24) 10%, rgb(161,27,34) 37%, rgb(214,3,3) 58%);
 						background-image: -o-linear-gradient(bottom, rgb(120,9,24) 10%, rgb(161,27,34) 37%, rgb(214,3,3) 58%);
