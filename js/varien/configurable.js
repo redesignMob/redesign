@@ -215,7 +215,7 @@ Product.Config.prototype = {
                 method: 'get',
                 onSuccess: function(transport) {
                     $j('#attrImages-'+attributeId).append(transport.responseText);
-					$('ajax_loader_colors').hide();
+                    $('ajax_loader_colors').hide();
                 }
             });
         });
@@ -225,8 +225,8 @@ Product.Config.prototype = {
     
     setOption: function(optionId) {
         colorAttributeId = 85;
-        
         $j('#attribute'+colorAttributeId).val(optionId);
+        this.configureElement($('attribute'+colorAttributeId));
         this.reloadPrice();
     },
 
@@ -302,7 +302,7 @@ Product.Config.prototype = {
             onSuccess: function(transport) {
                 //console.log(transport.responseText);
                 $('image').src = transport.responseText;
-                 $('ajax_loader').hide();
+                $('ajax_loader').hide();
             }
         });
     },
@@ -313,15 +313,19 @@ Product.Config.prototype = {
         }
         var price    = 0;
         var oldPrice = 0;
+        var image_reloaded = false;
         for(var i=this.settings.length-1;i>=0;i--){
             var selected = this.settings[i].options[this.settings[i].selectedIndex];
             if(selected.config){
                 price    += parseFloat(selected.config.price);
                 oldPrice += parseFloat(selected.config.oldPrice);
                 selectedProductId = selected.config.products;
-                this.changeImage(selectedProductId);
+                if(!image_reloaded) {
+                    this.changeImage(selectedProductId[0]);
+                    image_reloaded = true;
+                }
             } else {
-                this.changeImage(this.config.productId);
+                //this.changeImage(this.config.productId);
             }
         }
         
