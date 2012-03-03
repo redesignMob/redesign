@@ -33,7 +33,7 @@
 ?>
 <div class="cart">
     <div class="page-title title-buttons">
-        <h1><?php echo $this->__('Shopping Cart') ?></h1>
+        <h1 style="margin-left:120px;line-height:20px;"><?php echo $this->__('Shopping Cart') ?></h1>
         <?php if(!$this->hasError()): ?>
         <ul class="checkout-types">
         <?php foreach ($this->getMethods('top_methods') as $method): ?>
@@ -46,9 +46,10 @@
     </div>
     <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
     <?php echo $this->getChildHtml('form_before') ?>
+	<div style="height:40px;width:700px;"></div>
     <form action="<?php echo $this->getUrl('checkout/cart/updatePost') ?>" method="post">
         <fieldset>
-            <table id="shopping-cart-table" class="data-table cart-table">
+            <table id="shopping-cart-table" class="data-table">
                 <col width="1" />
                 <col />
                 <col width="1" />
@@ -113,7 +114,7 @@
         </fieldset>
     </form>
     <div class="cart-collaterals">
-        <div class="col2-set">
+        <div id="col2-set" >
             <div class="col-1">
                 <?php echo $this->getChildHtml('crosssell') ?>
             </div>
