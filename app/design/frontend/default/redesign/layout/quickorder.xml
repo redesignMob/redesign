@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.1.0">
+    <quickorder_index_index>
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+        <reference name="content">
+            <block type="quickorder/products" name="quickorder_products" as="quickorder_products" template="quickorder/quickorder.phtml" />
+        </reference>
+    </quickorder_index_index>
+</layout>
