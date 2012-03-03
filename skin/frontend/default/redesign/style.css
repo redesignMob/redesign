@@ -332,12 +332,12 @@ a
 #leftmenu  li  a span {position:relative;top:5px;}
 button.button span { display:block; height:19px;border-radius: 20px 20px 20px 20px; padding:0 8px; font:bold 12px/19px Arial, Helvetica, sans-serif; text-align:center; white-space:nowrap; color:#fff; }
 button.button span span:hover{color:#A8A8A8;}
-.block .block-title { background:url(images/block-head.png) 0 0 repeat-x transparent; border-bottom:1px solid #ddd;border-radius:10px 0 0 0; padding:2px 9px; }
+.block .block-title { background:url(images/block-head.png) 0 0 repeat-x #000; border-bottom:1px solid #ddd;border-radius:10px 0 0 0; padding:2px 9px; }
 #leftmenu  li.level0  ul.level0  {margin-top:25px;margin-bottom:300px;}
 .block-subscribe {top: 250px;position: relative;border:1px Solid #A8A8A8;}
 ul.level0  li.level1 a {margin-left:25px !important;}
 .block-cart {border:1px Solid #A8A8A8;}
-.product-colections {display:block;float:left;margin:5px 5px 35px 5px ;border:1px Solid #A8A8A8;height:150px;border-radius:10px;overflow:hidden;box-shadow:3px 3px 5px #000000; }
+.product-colections {display:block;margin:5px 5px 35px 5px ;border:1px Solid #A8A8A8;height:150px;border-radius:10px;overflow:hidden;box-shadow:3px 3px 5px #000000; }
 .product-colections a{text-decoration:none;color:#000;text-align:center;}
 #products_slider  { overflow: hidden;}
 #ColectionsImage {margin-left:50px;margin-bottom:20px;width:472px;height:320px;border:1px Solid #A8A8A8;overflow: hidden;border-radius: 10px;box-shadow: 3px 3px 5px #000;}
@@ -345,8 +345,13 @@ ul.level0  li.level1 a {margin-left:25px !important;}
 #products_slider  #slider_container div{background-color:white;}
 #myaccountmain {width:780px;}
 .dashboard{background-color:#fff;border-radius: 10px 10px 10px 10px;box-shadow: 0px 0px 8px #000;}
-.hello {margin}
+.hello {}
 .dashcontent {margin:20px;float:none !important;}
 .dashcontent .col2-set .col-1 {float:none !important;width:auto !important;padding-bottom:15px;}
 .dashcontent .col2-set  .col-2 {margin-left:0 !important;width:auto !important;}
 .my-wishlist .title-buttons   h1{text-align:center !important;margin-left:300px;}
+#fancybox-overlay {background-color:#000 !important;}
+.view-mode .list {color:White;}
+.view-mode .list:hover {color:Red;}
+.product-image #image {margin-left:100px;}
+.shipping {}
