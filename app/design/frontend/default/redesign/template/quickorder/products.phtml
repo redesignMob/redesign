@@ -12,6 +12,7 @@ $products = $this->getQuickorderData();
     <?php foreach($products as $product): ?>
         <div>
             <span><?php echo $product->getSku() ?> - <?php echo $product->getName() ?></span>
+            <img src="<?php echo Mage::helper('catalog/image')->init($product, 'thumbnail')->resize(20) ?>" />
             <a title="Adauga in cos" alt="Adauga in cos" style="cursor:pointer" onclick="addProductToCart('<?php echo $product->getId() ?>')"><img title="Adauga in cos" alt="Adauga in cos" id="add_to_cart_<?php echo $product->getId() ?>" src="<?php echo $this->getSkinUrl() ?>/images/icon_add2cart.gif" /></a>
             <img style="display:none" id="product_ajax_loader_<?php echo $product->getId() ?>" src="<?php echo $this->getSkinUrl() ?>images/i_ajax_loader.gif" />
         </div>
