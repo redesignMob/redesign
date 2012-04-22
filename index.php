@@ -29,6 +29,12 @@ if (version_compare(phpversion(), '5.2.0', '<')===true) {
     exit;
 }
 
+function l($data) {
+    $fh = fopen('debug.txt','wb');
+    fwrite($fh,$data);
+    fclose($fh);
+}
+
 function pr($arr) {
     echo "<pre>";
     print_r($arr);
