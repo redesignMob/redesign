@@ -78,6 +78,17 @@
 				</material>
 			</updates>
 		</layout>
+                <events>
+                    <catalog_product_save_after>
+                        <observers>
+                            <material_save_product_data>
+                                <type>singleton</type>
+                                <class>material/observer</class>
+                                <method>saveProductTabData</method>
+                            </material_save_product_data>
+                        </observers>
+                    </catalog_product_save_after>
+                </events>
     </adminhtml>   
     <global>
         <models>
@@ -94,6 +105,17 @@
                 </entities>
             </material_mysql4>
         </models>
+        <events>
+            <sales_order_place_after>
+                <observers>
+                    <material_observer>
+                        <type>singleton</type>
+                        <class>Redesign_Material_Model_Observer</class>
+                        <method>processMaterialsStock</method>
+                    </material_observer>
+                </observers>
+            </sales_order_place_after>
+        </events>
         <resources>
             <material_setup>
                 <setup>
