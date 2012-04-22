@@ -77,7 +77,10 @@ Default layout, loads most of the pages
                 <action method="addJs"><script>mage/adminhtml/tools.js</script></action>
                 <action method="addJs"><script>mage/adminhtml/uploader.js</script></action>
                 <action method="addJs"><script>mage/adminhtml/product.js</script></action>
-
+                
+                <action method="addJs"><script>jquery-1.6.4.min.js</script></action>
+                <action method="addJs"><script>jquery-noconflict.js</script></action>
+                
                 <action method="addCss"><name>reset.css</name></action>
                 <action method="addCss"><name>boxes.css</name></action>
                 <action method="addCss"><name>custom.css</name></action>
