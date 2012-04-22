@@ -24,7 +24,6 @@ class Redesign_Quickorder_IndexController extends Mage_Core_Controller_Front_Act
             $data = $category->getProductCollection()
                         ->addAttributeToSelect('*')
                         ->addAttributeToFilter('visibility',Mage_Catalog_Model_Product_Visibility::VISIBILITY_BOTH);
-//                        ->addAttributeToFilter('type_id',  Mage_Catalog_Model_Product_Type::TYPE_SIMPLE);
             $template = 'quickorder/products.phtml';
         }
         
