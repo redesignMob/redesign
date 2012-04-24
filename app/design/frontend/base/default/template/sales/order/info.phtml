@@ -27,10 +27,12 @@
 <?php  $_order = $this->getOrder() ?>
 <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
 <div class="page-title title-buttons">
-    <h1><?php echo $this->__('Order #%s - %s', $_order->getRealOrderId(), $_order->getStatusLabel()) ?></h1>
+    <h1 style="margin-left:10px;"><?php echo $this->__('Order #%s - %s', $_order->getRealOrderId(), $_order->getStatusLabel()) ?></h1>
     <?php echo $this->getChildHtml('buttons') ?>
 </div>
 <?php echo $this->getStatusHistoryRssUrl($_order) ?>
+<br/>
+<br/>
 <dl class="order-info">
     <dt><?php echo $this->__('About This Order:') ?></dt>
     <dd>

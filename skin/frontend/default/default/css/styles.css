@@ -515,7 +515,7 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 
 .data-table tfoot { border-bottom:1px solid #d9dde3; }
 .data-table tfoot tr.first td {background-color:#424242;}
-.data-table tfoot tr {  }
+.data-table tfoot tr { color:White;background-color: #424242; }
 .data-table tfoot td { padding-top:1px; padding-bottom:1px; border-bottom:0; border-right:1px solid #d9dde3; }
 .data-table tfoot strong { font-size:16px; }
 
@@ -594,6 +594,7 @@ tr.summary-details-excluded { font-style:italic; }
 .link-cart { color:#dc6809 !important; font-weight:bold; }
 .link-wishlist { color:#262626 !important; font-weight:bold; }
 .link-reorder { font-weight:bold; color:#dc6809 !important; }
+.link-reorder:hover {color:Red !important;}
 .link-compare { font-weight:bold;color:#8c8c8c !important; }
 .link-print { /*background:url(../images/i_print.gif) 0 2px no-repeat; padding:2px 0 2px 25px;*/ font-weight:bold; color:#dc6809; }
 .link-rss { background:url(../images/i_rss.gif) 0 2px no-repeat; padding-left:18px; line-height:14px; white-space:nowrap; }
@@ -645,7 +646,7 @@ tr.summary-details-excluded { font-style:italic; }
 .header .form-language label { font-weight:bold; padding-right:5px; color:#a7c6dd; vertical-align:middle; }
 .header .form-language select { padding:0; }
 .header .form-language select.flags option { background-position:4px 50%; background-repeat:no-repeat; padding-left:25px; }
-.header .links { float:right; margin:0 0 6px; }
+.header .links { float:right; margin:0 0 6px;width:700px; }
 .header .links li { margin-top:10px;float:left; font-size:11px; background:url(../images/bkg_pipe1.gif) 100% 60% no-repeat; padding:0 8px 0 7px; }
 .header .links a {   box-shadow:1px 1px 6px #000;
 									border-radius:10px;
@@ -1366,7 +1367,7 @@ background-image: -webkit-gradient(
 .send-friend .form-list input.input-text,
 .send-friend .form-list textarea { width:294px; }
 .send-friend .form-list li.wide .input-box { width:612px; }
-.send-friend .form-list li.wide textarea { width:609px; }
+.send-friend .form-list li.wide textarea { width:530px; }
 .send-friend .buttons-set .limit { float:right; margin:0 7px 0 0; font-size:11px; line-height:21px; }
 /* ======================================================================================= */
 
